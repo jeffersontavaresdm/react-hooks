@@ -10,14 +10,14 @@ interface Todo {
 
 interface Action {
   type: string;
-  inputValue: string
+  payload: string
 }
 
 const reducer = (state: State, action: Action) => {
   switch (action.type) {
     case 'add-task' : {
       let updatedState = {
-        tasks: [...state.tasks, { name: action.inputValue }]
+        tasks: [...state.tasks, { name: action.payload }]
       }
 
       console.log(updatedState)
@@ -36,7 +36,7 @@ const UseReducer2 = () => {
 
   function handlerInput() {
     if (inputValue != "") {
-      dispatch({ type: "add-task", inputValue: inputValue })
+      dispatch({ type: "add-task", payload: inputValue })
     }
 
     setInputValue("")

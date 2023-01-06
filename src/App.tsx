@@ -1,10 +1,13 @@
 import React from "react";
-import UseReducerHook from "./components/use-reducer/UseReducerHook";
+import ThemeContextProvider from "./components/use-context/UseContextHook";
+import Message from "./components/use-context/Message";
 
 function App() {
   return (
     <>
-      <UseReducerHook />
+      <ThemeContextProvider >
+        <Message />
+      </ThemeContextProvider >
     </>
   );
 }
