@@ -47,22 +47,32 @@ const UseReducer2 = () => {
   }
 
   return (
-    <div >
-      <input
-        autoFocus={true}
-        ref={inputRef}
-        value={inputValue}
-        onChange={(event) => setInputValue(event.target.value)}
-        onKeyDown={(event) => {
-          if (event.key === "Enter") {
-            handlerInput()
-          }
-        }}
-      />
-      <button
-        onClick={handlerInput} >
-        Adicionar
-      </button >
+    <>
+      <div style={{
+        display: "flex",
+        justifyContent: "center",
+        border: "2px solid cyan",
+        position: "absolute",
+        left: "50%",
+        top: "50%",
+        translate: "-50% -50%",
+      }} >
+        <input
+          autoFocus={true}
+          ref={inputRef}
+          value={inputValue}
+          onChange={(event) => setInputValue(event.target.value)}
+          onKeyDown={(event) => {
+            if (event.key === "Enter") {
+              handlerInput()
+            }
+          }}
+        />
+        <button
+          onClick={handlerInput} >
+          Adicionar
+        </button >
+      </div >
       {
         state.tasks.length == 0
           ? <></>
@@ -74,7 +84,7 @@ const UseReducer2 = () => {
             </ul >
           </div >
       }
-    </div >
+    </>
   )
 }
 
