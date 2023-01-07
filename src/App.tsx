@@ -1,8 +1,8 @@
 import React from "react";
-import UseContextHook from "./hooks/use-context/UseContextHook";
+import UseMemoHook from "./hooks/use-memo/UseMemoHook";
 
 function App() {
-  return <UseContextHook />
+  return <UseMemoHook />
 }
 
 export default App;
