@@ -1,15 +1,8 @@
 import React from "react";
-import ThemeContextProvider from "./components/use-context/UseContextHook";
-import Message from "./components/use-context/Message";
+import UseContextHook from "./hooks/use-context/UseContextHook";
 
 function App() {
-  return (
-    <>
-      <ThemeContextProvider >
-        <Message />
-      </ThemeContextProvider >
-    </>
-  );
+  return <UseContextHook />
 }
 
 export default App;
